@@ -1,1 +1,1 @@
-# thoughts.github.io
+# johnpierrebaptiste.github.io
