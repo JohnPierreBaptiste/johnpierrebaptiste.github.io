@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Consumer Apps as a Finance Person: What I Got Wrong — JohnPierreBaptiste</title>
+  <meta name="description" content="Honest reflection on the mistakes I made shipping a consumer product with a finance brain, and what I'd do differently next time.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+</head>
+<body>
+  <nav class="post-nav">
+    <a href="../index.html" class="post-back">&larr; Back</a>
+    <a href="../index.html" class="nav-logo">JPB</a>
+  </nav>
+  <article>
+    <header class="post-header container">
+      <div class="post-meta">
+        <span>October 2025</span>
+        <span>5 min read</span>
+      </div>
+      <h1 class="post-title">Building Consumer Apps as a Finance Person: What I Got Wrong</h1>
+    </header>
+    <div class="post-body container">
+      <p>I spent years in finance learning how to model uncertainty. Discounted cash flows, scenario analyses, sensitivity tables. The whole apparatus designed to make the unknowable feel manageable. Then I tried to build a consumer app, and I discovered that none of it transfers. Not one bit.</p>
+
+      <p>Actually, that's not quite right. The skills transfer. They just transfer in the worst possible way. Like bringing a very detailed map of Paris to navigate Tokyo.</p>
+
+      <h2>Mistake 1: I Built a Business Case Before I Built Anything</h2>
+
+      <p>Old habits die violently. Before writing a single line of code, before sketching a single screen, I had a three-tab spreadsheet. TAM, SAM, SOM. Unit economics at scale. A sensitivity table showing margins at different price points. I even modeled churn rates for a product that did not yet exist and had zero users.</p>
+
+      <p>This felt productive. It felt rigorous. In finance, you would never commit capital without a model, so why would you commit time?</p>
+
+      <p>Here's why: because a spreadsheet about a product nobody has used is fiction. Beautifully formatted fiction, with conditional formatting and named ranges, but fiction. I spent two weeks refining assumptions that I could have tested in two days by putting something ugly in front of five people.</p>
+
+      <p>The finance instinct says "de-risk before you deploy." The builder instinct says "deploy to de-risk." I had to unlearn the first one the hard way.</p>
+
+      <h2>Mistake 2: I Optimized for the Wrong Metric</h2>
+
+      <p>Finance trains you to think in terms of value capture. Revenue, margins, LTV/CAC ratios. So naturally, when I started thinking about my app, I optimized for monetization from day one. The pricing page was designed before the onboarding flow. I spent hours on payment integrations before I'd figured out whether anyone would use the free version.</p>
+
+      <p>This is like furnishing a house before pouring the foundation. It looks like progress. It is not progress.</p>
+
+      <p>Consumer apps live and die on one thing: do people come back tomorrow? Not "will they pay." Not "what's the gross margin." Just: did they open the app again? Retention is the only metric that matters in the early days, and it's the one metric that finance people are least equipped to think about because it's not on any income statement.</p>
+
+      <p>I should have spent that time making the core experience so good that people felt a small pang of loss when they closed the app. Instead, I had a Stripe integration and a churn model. For an app with eleven users.</p>
+
+      <h2>Mistake 3: I Treated Users Like Rational Actors</h2>
+
+      <p>This one still embarrasses me.</p>
+
+      <p>In finance, you build models where agents act in their economic self-interest. People maximize utility. Markets find equilibrium. It's all very clean and very wrong when applied to consumer behavior.</p>
+
+      <p>I designed my app assuming users would read the tutorial, follow the suggested workflow, and use features in the order I intended. I wrote detailed tooltips. I built a logical, sequential onboarding that moved through concepts in the correct pedagogical order.</p>
+
+      <p>Nobody read any of it. People clicked randomly, skipped every explanation, got confused by things I thought were obvious, and found workarounds for things I thought were locked down. One early tester used a notes field as their primary navigation method. I still don't fully understand how.</p>
+
+      <p>Users are not rational actors optimizing for utility. They are busy, distracted people with fourteen other tabs open, giving you about forty seconds of goodwill before they bounce. You don't get to explain your product to them. The product has to explain itself, instantly, or it's over.</p>
+
+      <h2>Mistake 4: I Was Afraid of Looking Unserious</h2>
+
+      <p>Finance culture prizes polish. The deck has to be perfect. The model has to be airtight. You present finished work, not rough drafts. Showing something half-baked to a client would be career suicide.</p>
+
+      <p>So I kept my app hidden for months. Tweaking. Refining. Adding features nobody asked for because I imagined sophisticated users who would need them. I was terrified of showing something that looked amateur, something that might make people think I didn't know what I was doing.</p>
+
+      <p>Meanwhile, builders who actually knew what they were doing were shipping ugly prototypes, collecting feedback, and iterating. They looked unserious. They were making faster progress than me by every measure that mattered.</p>
+
+      <p>The lesson took months to land: in consumer products, the cost of shipping too late almost always exceeds the cost of shipping too early. Your reputation is not your brand guidelines. It's whether the thing works.</p>
+
+      <h2>What I'd Do Differently</h2>
+
+      <p>If I could go back, I'd change four things. First, I'd build the smallest possible version in one week and show it to strangers. Not friends. Strangers don't spare your feelings, and that's exactly what you need.</p>
+
+      <p>Second, I'd ban myself from opening a spreadsheet for the first three months. No financial modeling until there's actual usage data to model. Speculation dressed up as analysis is still speculation.</p>
+
+      <p>Third, I'd watch five people use the app before making any design decisions. Not ask them what they think. Watch them. The gap between what people say and what people do is where all the important information lives.</p>
+
+      <p>Fourth, I'd find a co-builder who had shipped consumer products before. Not an advisor. Not a mentor. Someone in the trenches, writing code and talking to users, who could catch my finance-brain instincts before they calcified into product decisions.</p>
+
+      <h2>The One Thing Finance Got Right</h2>
+
+      <p>I don't want to be entirely self-flagellating here. Finance gave me one gift that turned out to be genuinely useful: comfort with numbers that tell you bad news.</p>
+
+      <p>A lot of first-time builders I've met struggle to look at a dashboard showing declining retention or a cohort analysis that trends the wrong direction. They explain it away, blame external factors, wait for more data. Finance trained me to stare at ugly numbers without flinching. When the data said my onboarding was broken, I didn't argue with it. I just fixed the onboarding.</p>
+
+      <p>That willingness to let data override your ego. That's the one transferable skill. Everything else, I had to learn from scratch, most of it by getting it wrong first.</p>
+
+      <blockquote>
+        <p>The best thing about being wrong is that it's the fastest way to figure out what right looks like. The worst thing about being wrong is that it doesn't feel fast while it's happening.</p>
+      </blockquote>
+
+      <p>I'm still learning. But at least now when I catch myself opening a spreadsheet before I've talked to a user, I close the laptop and pick up the phone instead. Most of the time.</p>
+    </div>
+    <div class="post-end-mark container">
+      <span>&#9670;</span>
+    </div>
+  </article>
+  <script src="../script.js"></script>
+</body>
+</html>

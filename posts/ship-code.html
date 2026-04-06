@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Every Investor Should Learn to Ship Code — JohnPierreBaptiste</title>
+  <meta name="description" content="Building software changed how I evaluate companies. Here's what finance gets wrong about engineering, and what engineers get wrong about finance.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+</head>
+<body>
+  <nav class="post-nav">
+    <a href="../index.html" class="post-back">&larr; Back</a>
+    <a href="../index.html" class="nav-logo">JPB</a>
+  </nav>
+  <article>
+    <header class="post-header container">
+      <div class="post-meta">
+        <span>March 2026</span>
+        <span>5 min read</span>
+      </div>
+      <h1 class="post-title">Why Every Investor Should Learn to Ship Code</h1>
+    </header>
+    <div class="post-body container">
+      <p>I spent the first three years of my career reading balance sheets. I spent the next two writing Python scripts that would have made my former self nervous. The second education was more valuable than the first, and it wasn't close.</p>
+
+      <p>Here's the thing nobody in finance wants to admit: most investors have no idea what they're actually valuing. They can model a DCF in their sleep. They can debate WACC assumptions until the bar closes. But ask them what a database migration looks like, or why a rewrite from monolith to microservices might take eighteen months instead of six, and you'll get a confident answer that is completely wrong.</p>
+
+      <p>I know because I used to be that person.</p>
+
+      <h2>The Spreadsheet Delusion</h2>
+
+      <p>In 2023, I was evaluating a SaaS company that looked perfect on paper. Revenue growing 40% year over year. Net retention above 130%. The financial model sang. Every analyst on the call was bullish.</p>
+
+      <p>But I'd recently started building a side project, a small tool for tracking portfolio exposures. Nothing fancy. Flask backend, PostgreSQL, a React frontend I mostly copied from tutorials. The process of building even that tiny thing had rewired something in my brain. I started asking different questions.</p>
+
+      <p>I asked about their deployment pipeline. The CTO paused. They were still deploying manually. Every release required a senior engineer to SSH into production servers and run scripts by hand. For a company with 200 enterprise customers and a $400M valuation.</p>
+
+      <p>That single question, which I never would have thought to ask twelve months earlier, saved my fund from a position that cratered 60% when their platform went down for three days during a botched update. The post-mortem was predictable to anyone who'd ever pushed broken code to production at 2 AM.</p>
+
+      <h2>What Building Teaches You</h2>
+
+      <p>Reading about software is to building software what reading restaurant reviews is to working a Friday night line. The knowledge lives in your hands, not your head.</p>
+
+      <p>When you've actually shipped something, even something small and ugly, you develop an intuition for a set of things that matter enormously in company evaluation but never show up in a 10-K filing.</p>
+
+      <p>You learn that technical debt is real and compounds exactly like financial debt, except there's no line item for it. You learn that "we'll refactor later" is the engineering equivalent of "we'll cut costs next quarter." It almost never happens voluntarily. It happens when something breaks.</p>
+
+      <p>You learn that the difference between a good engineering team and a mediocre one isn't speed. It's the ability to change direction without everything catching fire. I didn't understand this until I tried to add a simple feature to my own project and realized I'd painted myself into an architectural corner that took two weeks to escape.</p>
+
+      <p>Two weeks. For a feature that should have taken an afternoon. Multiply that by a thousand engineers and you start to understand why software estimates are famously, almost comically wrong.</p>
+
+      <h2>The Moat You Can't Model</h2>
+
+      <p>Wall Street loves the word "moat." Network effects, switching costs, brand. All real. All important. But there's a moat that rarely gets discussed in investor presentations because it's invisible to anyone who hasn't built things.</p>
+
+      <p>I call it architectural leverage.</p>
+
+      <p>Some companies are built so that every new feature makes the next feature easier. The codebase accumulates capability like a snowball rolling downhill. Others are built so that every new feature is a negotiation with the sins of the past. Same headcount. Same burn rate. Radically different trajectories.</p>
+
+      <p>You cannot see this in the financials. You can barely see it in the product. But if you've ever inherited a codebase where adding a button to the UI requires changes in fourteen files across six services, you feel it in your bones. And you learn to ask the questions that surface it in diligence.</p>
+
+      <p>Last year I passed on a company that every other fund in our circle was fighting to get into. Great metrics. Charismatic founder. The works. But during technical diligence, I noticed their API response times were degrading quarter over quarter, even as they added infrastructure. That's a signature. It means the complexity is growing faster than the team's ability to manage it. Six months later they announced a "strategic pause" on new features to focus on platform stability. The stock is down 35%.</p>
+
+      <h2>The Uncomfortable Truth</h2>
+
+      <p>Finance people think they're rigorous because they use numbers. Engineers think they're rigorous because they use logic. Both are half right.</p>
+
+      <p>The best evaluations I've ever done live at the intersection. They combine the financial discipline of understanding unit economics with the technical intuition of knowing what's actually hard to build. Most investors have the first skill. Almost none have the second. That's the arbitrage.</p>
+
+      <p>I'm not saying every analyst needs to become a software engineer. I'm saying you should build something. Anything. A script that automates part of your workflow. A simple web app. A bot. Something that forces you to confront the gap between "this should be easy" and the reality of making a computer do what you want.</p>
+
+      <p>That gap is where billions of dollars of enterprise value get created and destroyed every year. And right now, most of the people allocating capital toward software companies have never once stood on the other side of it.</p>
+
+      <h2>Start Small, Stay Curious</h2>
+
+      <p>I still write code most weekends. Nothing that would impress a real engineer. But every time I struggle with a dependency conflict or spend an hour debugging something that turned out to be a single missing comma, I get a little better at my actual job.</p>
+
+      <p>The best trade I made last year started with a Hacker News comment about database indexing strategies that led me down a rabbit hole about query optimization, which led me to realize that a mid-cap company I'd been watching had quietly re-architected their data layer in a way that their competitors hadn't noticed yet. Their margins expanded two quarters later exactly as I'd expected.</p>
+
+      <p>No financial model gave me that insight. No sell-side report flagged it. It came from the specific, hard-won knowledge of having built things myself. Badly, slowly, with plenty of mistakes. But built.</p>
+
+      <blockquote>
+        <p>The investor who can read a balance sheet and a codebase will always have an edge over the one who can only read the balance sheet. The gap is narrowing, but it's still enormous.</p>
+      </blockquote>
+
+      <p>Learn to ship code. It will change how you see everything.</p>
+    </div>
+    <div class="post-end-mark container">
+      <span>&#9670;</span>
+    </div>
+  </article>
+  <script src="../script.js"></script>
+</body>
+</html>
