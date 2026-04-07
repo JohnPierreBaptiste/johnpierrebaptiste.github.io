@@ -1,5 +1,5 @@
 // ========================================
-// laurencetarquinio — Site Interactions
+// JohnPierreBaptiste — Site Interactions
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
