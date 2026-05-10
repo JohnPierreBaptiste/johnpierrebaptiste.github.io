@@ -1,5 +1,5 @@
 // ========================================
-// JohnPierreBaptiste — Site Interactions
+// LMET — Site Interactions
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
